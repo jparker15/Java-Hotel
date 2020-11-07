@@ -1,21 +1,28 @@
 package com.careerdevs;
 
+import java.util.Scanner;
+
 public class Room extends Floor{
 
-    private boolean isOccupied = false;
-    private String Occupant;
-    private byte roomNumber;
+    Scanner scanner = new Scanner(System.in);
 
-    public Room (byte floorNumber,byte numberOfRooms, boolean isOccupied, String Occupant, byte roomNumber ) {
-        super(floorNumber, numberOfRooms);
+    private boolean isOccupied = false;
+    private String Occupant = scanner.nextLine();
+
+
+    public Room (byte numberOfRooms, boolean isOccupied, String Occupant) {
+        super(numberOfRooms);
         this.isOccupied = isOccupied;
         this.Occupant = Occupant;
-        this.roomNumber = roomNumber;
 
 
     }
 
+    public void getRooms(){}
+
     public void checkIn (){
+
+        System.out.println("Enter name of the occupant: ");
 
     }
 
